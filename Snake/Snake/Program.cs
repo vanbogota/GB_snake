@@ -13,25 +13,33 @@ namespace Snake
             Point p2 = new Point(4, 5, '#');            
             p2.Draw();
 
-            List<char> chars = new List<char>();
-            chars.Add('*');
-            chars.Add('#');
-            chars.Add('+');
-            chars.Add('=');
+            HorizontalLine line = new HorizontalLine(5, 10, 8, '+');
+            line.Draw();
 
-            Point p3 = new Point(7, 6, chars[2]);
-            p3.Draw();
+            VerticalLine line2 = new VerticalLine(5, 10, 8, '*');
+            line2.Draw();
 
-            Point p4 = new Point(8, 9, chars[^1]);
-            p3.Draw();
+            //List<char> chars = new List<char>();
+            //chars.Add('*');
+            //chars.Add('#');
+            //chars.Add('+');
+            //chars.Add('=');
 
-            List<Point> points = new List<Point>
-            {
-                p1,
-                p2,
-                p3,
-                p4
-            };
+            //Point p3 = new Point(7, 6, chars[2]);
+            //p3.Draw();
+
+            //Point p4 = new Point(8, 9, chars[^1]);
+            //p3.Draw();
+
+            //List<Point> points = new List<Point>
+            //{
+            //    p1,
+            //    p2,
+            //    p3,
+            //    p4
+            //};
+
+
 
             Console.ReadLine();
         }
