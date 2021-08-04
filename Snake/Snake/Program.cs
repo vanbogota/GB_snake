@@ -21,34 +21,24 @@ namespace Snake
             VerticalLine lineRight = new VerticalLine(0, 24, 78, '+');
             lineRight.Draw();
 
-            //List<char> chars = new List<char>();
-            //chars.Add('*');
-            //chars.Add('#');
-            //chars.Add('+');
-            //chars.Add('=');
-
-            //Point p3 = new Point(7, 6, chars[2]);
-            //p3.Draw();
-
+            //первая точка - начало змейки
             Point p = new Point(8, 9, '*');
 
             Snake snake = new Snake(p, 4, Direction.Right);
             snake.Draw();
 
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
+            while (true)
+            {
+                if (Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo key = Console.ReadKey();
+                    snake.ChangeDirection(key.Key);
+                }
+                Thread.Sleep(100);
+                snake.Move();
+            }
 
-            Console.ReadKey();
+            
         }
        
     }
