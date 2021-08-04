@@ -19,6 +19,7 @@ namespace Snake
 
             VerticalLine lineRight = new VerticalLine(0, 24, 78, '+');
             lineRight.Draw();
+
             //List<char> chars = new List<char>();
             //chars.Add('*');
             //chars.Add('#');
@@ -28,18 +29,10 @@ namespace Snake
             //Point p3 = new Point(7, 6, chars[2]);
             //p3.Draw();
 
-            //Point p4 = new Point(8, 9, chars[^1]);
-            //p3.Draw();
+            Point p = new Point(8, 9, '*');
 
-            //List<Point> points = new List<Point>
-            //{
-            //    p1,
-            //    p2,
-            //    p3,
-            //    p4
-            //};
-
-
+            Snake snake = new Snake(p, 4, Direction.Right);
+            snake.Draw();
 
             Console.ReadLine();
         }
